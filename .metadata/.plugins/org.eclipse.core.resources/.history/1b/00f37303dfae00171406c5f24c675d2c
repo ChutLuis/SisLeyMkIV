@@ -1,0 +1,14 @@
+package sisley.main;
+
+public class Solicitudes {
+	private String ley;
+	private int idLey;
+	private int idReg;
+	private String reglamento;
+	
+	public void () {
+		
+	}
+
+ 
+}

@@ -2,17 +2,12 @@ package sisley.main;
 
 public class Asesores extends Parlamentarios {
 	
-	
 	private int idParl;
 	private String userAse;
-	
-	public Asesores() {
-		super();
-	}
-	public Asesores(String usuario, int idPar) {
-		super(usuario);
-		userAse = usuario;
-		idParl = idPar; 
+	private Parlamentarios a;
+	public Asesores(String usuario) {
+		this.userAse = usuario;
+		this.idParl = a.getIdPar();
 	}
 	public int getIdParl() {
 		return idParl;

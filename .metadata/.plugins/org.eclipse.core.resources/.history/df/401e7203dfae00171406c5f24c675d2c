@@ -26,9 +26,5 @@ public class Parlamentarios {
 	public void setIdPar(int idPar) {
 		this.idPar = idPar;
 	}
-	public void copiaLey()
-	{
-		
-	}
 	
 }

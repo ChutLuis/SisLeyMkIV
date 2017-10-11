@@ -10,7 +10,6 @@ public class Reglamentos extends Leyes {
 			super(ley);
 			reglamento = ley;
 			idReglamentos = idLey;
-			copias = 5;
 		}
 		public int getIdReglamentos() {
 			return idReglamentos;
@@ -24,10 +23,6 @@ public class Reglamentos extends Leyes {
 		public void setReglamento(String reglamento) {
 			this.reglamento = reglamento;
 		}
-		public int getCopias() {
-			return copias;
-		}
-		public void setCopias(int copias) {
-			this.copias = copias;
-		}
+		
+		
 }

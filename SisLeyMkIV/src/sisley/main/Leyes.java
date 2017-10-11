@@ -1,5 +1,33 @@
 package sisley.main;
 
 public class Leyes {
+	
+	private String Ley;
+	private int idLey;
+	private int copias;
+ 
+	public Leyes(String ley) {
+	Ley = ley;
+	idLey = 0;
+	copias = 5;
+	}
+	public int getCopias() {
+		return copias;
+	}
+	public void setCopias(int copias) {
+		this.copias = copias;
+	}
+	public String getLey() {
+		return Ley;
+	}
+	public void setLey(String ley) {
+		Ley = ley;
+	}
+	public int getIdLey() {
+		return idLey;
+	}
+	public void setIdLey(int idLey) {
+		this.idLey = idLey;
+	}
 
 }
