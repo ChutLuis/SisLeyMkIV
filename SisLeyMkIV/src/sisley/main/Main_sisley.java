@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Main_sisley extends JFrame {
 
@@ -33,6 +35,7 @@ public class Main_sisley extends JFrame {
 	 * Create the frame.
 	 */
 	public Main_sisley() {
+		setTitle("SisLeyMkIV");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 400);
 		
@@ -42,43 +45,89 @@ public class Main_sisley extends JFrame {
 		JMenu mnUsuarios = new JMenu("Usuarios");
 		menuBar.add(mnUsuarios);
 		
-		JMenu mnCreacion = new JMenu("Creacion");
+		JMenu mnCreacion = new JMenu("Creacion");// Leyes
+		mnCreacion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		mnUsuarios.add(mnCreacion);
 		
 		JMenu mnModificacion = new JMenu("Modificacion");
+		mnModificacion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnUsuarios.add(mnModificacion);
 		
 		JMenu mnEliminacion = new JMenu("Eliminacion");
+		mnEliminacion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		mnUsuarios.add(mnEliminacion);
 		
 		JMenu mnLeyes = new JMenu("Leyes");
 		menuBar.add(mnLeyes);
 		
 		JMenu mnCreacion_1 = new JMenu("Creacion");
+		mnCreacion_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnLeyes.add(mnCreacion_1);
 		
 		JMenu mnModificacion_1 = new JMenu("Modificacion");
+		mnModificacion_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnLeyes.add(mnModificacion_1);
 		
 		JMenu mnEliminacion_1 = new JMenu("Eliminacion");
+		mnEliminacion_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnLeyes.add(mnEliminacion_1);
 		
 		JMenu mnSolicitudes = new JMenu("Solicitudes");
 		menuBar.add(mnSolicitudes);
 		
 		JMenu mnPrestamoLey = new JMenu("Prestamo Ley");
+		mnPrestamoLey.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnSolicitudes.add(mnPrestamoLey);
 		
 		JMenu mnPrestamoStack = new JMenu("Prestamo Stack");
+		mnPrestamoStack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnSolicitudes.add(mnPrestamoStack);
 		
 		JMenu mnInformacion = new JMenu("Informacion");
+		mnInformacion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		menuBar.add(mnInformacion);
 		
 		JMenu mnPorLey = new JMenu("Por Ley");
+		mnPorLey.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnInformacion.add(mnPorLey);
 		
 		JMenu mnPorStack = new JMenu("Por Stack");
+		mnPorStack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		mnInformacion.add(mnPorStack);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -3,6 +3,8 @@ package sisley.main;
 public class Parlamentarios {
 	private String usuario;
 	private int idPar;
+	
+	
 	public String getUsuario() {
 		return usuario;
 	}
