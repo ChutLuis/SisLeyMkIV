@@ -10,6 +10,9 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JMenuItem;
 
 public class Main_sisley extends JFrame {
 
@@ -18,6 +21,7 @@ public class Main_sisley extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	User_Create create1 = new User_Create();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -45,69 +49,40 @@ public class Main_sisley extends JFrame {
 		JMenu mnUsuarios = new JMenu("Usuarios");
 		menuBar.add(mnUsuarios);
 		
-		JMenu mnCreacion = new JMenu("Creacion");// Leyes
-		mnCreacion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-			}
-		});
-		mnUsuarios.add(mnCreacion);
-		
-		JMenu mnModificacion = new JMenu("Modificacion");
-		mnModificacion.addActionListener(new ActionListener() {
+		JMenuItem mntmCreate = new JMenuItem("Create");
+		mntmCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				create1.show();
 			}
 		});
-		mnUsuarios.add(mnModificacion);
+		mnUsuarios.add(mntmCreate);
 		
-		JMenu mnEliminacion = new JMenu("Eliminacion");
-		mnEliminacion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		mnUsuarios.add(mnEliminacion);
+		JMenuItem mntmModificar = new JMenuItem("Modificar");
+		mnUsuarios.add(mntmModificar);
+		
+		JMenuItem mntmEliminar = new JMenuItem("Eliminar");
+		mnUsuarios.add(mntmEliminar);
 		
 		JMenu mnLeyes = new JMenu("Leyes");
 		menuBar.add(mnLeyes);
 		
-		JMenu mnCreacion_1 = new JMenu("Creacion");
-		mnCreacion_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnLeyes.add(mnCreacion_1);
+		JMenuItem mntmCrear = new JMenuItem("Crear");
+		mnLeyes.add(mntmCrear);
 		
-		JMenu mnModificacion_1 = new JMenu("Modificacion");
-		mnModificacion_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnLeyes.add(mnModificacion_1);
+		JMenuItem mntmModificar_1 = new JMenuItem("Modificar");
+		mnLeyes.add(mntmModificar_1);
 		
-		JMenu mnEliminacion_1 = new JMenu("Eliminacion");
-		mnEliminacion_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnLeyes.add(mnEliminacion_1);
+		JMenuItem mntmEliminar_1 = new JMenuItem("Eliminar");
+		mnLeyes.add(mntmEliminar_1);
 		
 		JMenu mnSolicitudes = new JMenu("Solicitudes");
 		menuBar.add(mnSolicitudes);
 		
-		JMenu mnPrestamoLey = new JMenu("Prestamo Ley");
-		mnPrestamoLey.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnSolicitudes.add(mnPrestamoLey);
+		JMenuItem mntmPrestamoLey = new JMenuItem("Prestamo Ley");
+		mnSolicitudes.add(mntmPrestamoLey);
 		
-		JMenu mnPrestamoStack = new JMenu("Prestamo Stack");
-		mnPrestamoStack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnSolicitudes.add(mnPrestamoStack);
+		JMenuItem mntmPrestamoStack = new JMenuItem("Prestamo Stack");
+		mnSolicitudes.add(mntmPrestamoStack);
 		
 		JMenu mnInformacion = new JMenu("Informacion");
 		mnInformacion.addActionListener(new ActionListener() {
@@ -116,19 +91,11 @@ public class Main_sisley extends JFrame {
 		});
 		menuBar.add(mnInformacion);
 		
-		JMenu mnPorLey = new JMenu("Por Ley");
-		mnPorLey.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnInformacion.add(mnPorLey);
+		JMenuItem mntmInfoLey = new JMenuItem("Info Ley");
+		mnInformacion.add(mntmInfoLey);
 		
-		JMenu mnPorStack = new JMenu("Por Stack");
-		mnPorStack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		mnInformacion.add(mnPorStack);
+		JMenuItem mntmInfoStack = new JMenuItem("Info Stack");
+		mnInformacion.add(mntmInfoStack);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));

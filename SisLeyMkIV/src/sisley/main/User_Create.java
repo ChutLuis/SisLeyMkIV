@@ -11,9 +11,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class User_Create extends JFrame {
 
+	private User_Create z1 = new User_Create();
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -24,7 +26,12 @@ public class User_Create extends JFrame {
 	private JTextField textField_6;
 	private JTextField textField_7;
 	private JTextField textField_8;
-
+	
+	int idMixure = 0;
+	int count = 0;
+	ArrayList<Parlamentarios> p1 = new ArrayList<Parlamentarios>();
+	ArrayList<Asesores> A1 = new ArrayList<Asesores>();
+	
 	/**
 	 * Launch the application.
 	 */
@@ -52,11 +59,15 @@ public class User_Create extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		Parlamentarios pr1 = new Parlamentarios();
+		Asesores as1 = new Asesores();	
 		JButton btnNewButton = new JButton("Crear");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				 pr1.setUsuario(textField.getText());
+				JOptionPane.showMessageDialog(null, pr1.getIdPar());
+				 p1.add(idMixure, pr1);		 			 
+				 
 			}
 		});
 		btnNewButton.setBounds(43, 353, 89, 23);
@@ -65,7 +76,7 @@ public class User_Create extends JFrame {
 		JButton btnNewButton_1 = new JButton("Cancelar");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				z1.hide();
 			}
 		});
 		btnNewButton_1.setBounds(362, 353, 89, 23);

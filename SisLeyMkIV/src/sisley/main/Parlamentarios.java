@@ -26,8 +26,8 @@ public class Parlamentarios {
 	public int getIdPar() {
 		return idPar;
 	}
-	public void setIdPar(int idPar) {
-		this.idPar = idPar;
+	public void setIdPar() {
+		idPar++;
 	}
 	public void copiaLey(int idLey, int copias, Leyes ley)	 
 	{
