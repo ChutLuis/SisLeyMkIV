@@ -29,9 +29,5 @@ public class Leyes {
 	public void setIdLey(int idLey) {
 		this.idLey = idLey;
 	}
-	@Override
-	public String toString() {
-		return "Leyes [Ley=" + Ley + ", idLey=" + idLey + ", copias=" + copias + "]";
-	}
 
 }

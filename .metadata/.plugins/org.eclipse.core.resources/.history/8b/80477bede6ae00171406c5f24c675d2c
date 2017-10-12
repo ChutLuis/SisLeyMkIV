@@ -145,11 +145,11 @@ public class User_Create extends JFrame {
 		contentPane.add(lblAsesor_4);
 		
 		JLabel lblAsesor_5 = new JLabel("Asesor 7");
-		lblAsesor_5.setBounds(155, 295, 65, 14);
+		lblAsesor_5.setBounds(155, 295, 46, 14);
 		contentPane.add(lblAsesor_5);
 		
 		JLabel lblAsesort = new JLabel("Asesort 8");
-		lblAsesort.setBounds(295, 295, 66, 14);
+		lblAsesort.setBounds(295, 295, 46, 14);
 		contentPane.add(lblAsesort);
 	}
 }

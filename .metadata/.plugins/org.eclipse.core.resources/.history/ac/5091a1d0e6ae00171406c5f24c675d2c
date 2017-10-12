@@ -30,10 +30,4 @@ public class Reglamentos extends Leyes {
 		public void setCopias(int copias) {
 			this.copias = copias;
 		}
-		@Override
-		public String toString() {
-			return "Reglamentos [idReglamentos=" + idReglamentos + ", reglamento=" + reglamento + ", copias=" + copias
-					+ "]";
-		}
-		
 }

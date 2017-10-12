@@ -6,7 +6,6 @@ public class Parlamentarios {
 	private String usuario;
 	private int idPar;
 	ArrayList<Leyes> n2 = new ArrayList<Leyes>();
-	ArrayList<Reglamentos> n3 =new ArrayList<Reglamentos>();
 	
 	
 	public Parlamentarios() {
@@ -41,17 +40,5 @@ public class Parlamentarios {
 		}
 		
 	}
-	public void copiaStack(int idLey, int copias, Leyes ley, Reglamentos reg)
-	{
-		int copiasL = 0;
-		if(copias <= 2){
-			n2.add(copiasL,ley);
-			n3.add(copiasL, reg);
-		}
-		else
-		{
-			JOptionPane.showMessageDialog(null, "Copias Maximas por Grupo Alcanzadas");	
-		}
-		
-	}
+	
 }
