@@ -14,14 +14,25 @@ import javax.swing.JButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JMenuItem;
 
-public class Main_sisley extends JFrame {
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Main_sisley.
+ */
+public class Main_sisley extends JFrame{
 
+	/** The content pane. */
 	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
 	User_Create create1 = new User_Create();
+	User_eliminate delete1 = new User_eliminate();
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -52,15 +63,25 @@ public class Main_sisley extends JFrame {
 		JMenuItem mntmCreate = new JMenuItem("Create");
 		mntmCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				create1.show();
+				create1.setVisible(true);
 			}
 		});
 		mnUsuarios.add(mntmCreate);
 		
 		JMenuItem mntmModificar = new JMenuItem("Modificar");
+		mntmModificar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		mnUsuarios.add(mntmModificar);
 		
 		JMenuItem mntmEliminar = new JMenuItem("Eliminar");
+		mntmEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				delete1.setVisible(true);
+			}
+		});
 		mnUsuarios.add(mntmEliminar);
 		
 		JMenu mnLeyes = new JMenu("Leyes");

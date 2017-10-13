@@ -1,0 +1,224 @@
+package sisley.main;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class User_Create.
+ */
+public class User_Create extends JFrame {
+
+	
+	/** The z 1. */
+	private static User_Create z1 = new User_Create();
+	
+	/** The content pane. */
+	private JPanel contentPane;
+	
+	/** The text field. */
+	private JTextField textField;
+	
+	/** The text field 1. */
+	private JTextField textField_1;
+	
+	/** The text field 2. */
+	private JTextField textField_2;
+	
+	/** The text field 3. */
+	private JTextField textField_3;
+	
+	/** The text field 4. */
+	private JTextField textField_4;
+	
+	/** The text field 5. */
+	private JTextField textField_5;
+	
+	/** The text field 6. */
+	private JTextField textField_6;
+	
+	/** The text field 7. */
+	private JTextField textField_7;
+	
+	/** The text field 8. */
+	private JTextField textField_8;
+	
+	Parlamentarios pr1 = new Parlamentarios();
+	/** The id mixure. */
+	int idMixure = 1;
+	
+	/** The count. */
+	int count = 0;
+	
+	/** The p 1. */
+	ArrayList<Parlamentarios> p1 = new ArrayList<Parlamentarios>();
+	
+	/**
+	 * Launch the application.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+				  z1.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public User_Create() {
+		setTitle("Creacion de Usuario");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 527, 477);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Crear");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 pr1.setUsuario(textField.getText());
+				JOptionPane.showMessageDialog(null, pr1.getIdPar());
+				 
+				 pr1.addAsesor(0,textField_1.getText());
+				 pr1.addAsesor(1,textField_2.getText());
+				 pr1.addAsesor(2,textField_3.getText());
+				 pr1.addAsesor(3,textField_4.getText());
+				 pr1.addAsesor(4,textField_5.getText());
+				 pr1.addAsesor(5,textField_6.getText());
+				 pr1.addAsesor(6,textField_7.getText());
+				 pr1.addAsesor(7,textField_8.getText());				
+				p1.add(idMixure, pr1);
+				 pr1.setIdPar();
+				 idMixure++;
+				 
+			}
+		});
+		btnNewButton.setBounds(43, 353, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Cancelar");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				z1.hide();
+			}
+		});
+		btnNewButton_1.setBounds(362, 353, 89, 23);
+		contentPane.add(btnNewButton_1);
+		
+		textField = new JTextField();
+		textField.setBounds(200, 42, 86, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(134, 93, 86, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(134, 149, 86, 20);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(134, 203, 86, 20);
+		contentPane.add(textField_3);
+		textField_3.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(137, 264, 86, 20);
+		contentPane.add(textField_4);
+		textField_4.setColumns(10);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(275, 93, 86, 20);
+		contentPane.add(textField_5);
+		textField_5.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(275, 149, 86, 20);
+		contentPane.add(textField_6);
+		textField_6.setColumns(10);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(275, 203, 86, 20);
+		contentPane.add(textField_7);
+		textField_7.setColumns(10);
+		
+		textField_8 = new JTextField();
+		textField_8.setBounds(275, 264, 86, 20);
+		contentPane.add(textField_8);
+		textField_8.setColumns(10);
+		
+		JLabel lblParlamentario = new JLabel("Parlamentario");
+		lblParlamentario.setBounds(104, 44, 86, 17);
+		contentPane.add(lblParlamentario);
+		
+		JLabel lblParlamentario_1 = new JLabel("Asesor 1");
+		lblParlamentario_1.setBounds(155, 124, 54, 14);
+		contentPane.add(lblParlamentario_1);
+		
+		JLabel lblAsesor = new JLabel("Asesor 3");
+		lblAsesor.setBounds(155, 178, 54, 14);
+		contentPane.add(lblAsesor);
+		
+		JLabel lblAsesor_3 = new JLabel("Asesor 5");
+		lblAsesor_3.setBounds(155, 239, 54, 14);
+		contentPane.add(lblAsesor_3);
+		
+		JLabel lblAsesor_1 = new JLabel("Asesor 2");
+		lblAsesor_1.setBounds(295, 124, 54, 14);
+		contentPane.add(lblAsesor_1);
+		
+		JLabel lblAsesor_2 = new JLabel("Asesor 4");
+		lblAsesor_2.setBounds(295, 180, 54, 14);
+		contentPane.add(lblAsesor_2);
+		
+		JLabel lblAsesor_4 = new JLabel("Asesor 6");
+		lblAsesor_4.setBounds(295, 239, 54, 14);
+		contentPane.add(lblAsesor_4);
+		
+		JLabel lblAsesor_5 = new JLabel("Asesor 7");
+		lblAsesor_5.setBounds(155, 295, 65, 14);
+		contentPane.add(lblAsesor_5);
+		
+		JLabel lblAsesort = new JLabel("Asesort 8");
+		lblAsesort.setBounds(295, 295, 66, 14);
+		contentPane.add(lblAsesort);
+	}
+	public String deletParlamentario(int i) {
+		
+		return p1.remove(i).toString();
+	}
+	public String getParlamentario(int i)
+	{
+		return p1.get(i).getUsuario();
+	}
+	public int getlistLenght()
+	{
+		return p1.size();
+	}
+	
+	public void modParlamentarios(int i, Parlamentarios e) {
+		p1.set(i, e);
+	}
+	
+}
